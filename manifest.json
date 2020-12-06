@@ -1,0 +1,36 @@
+{
+  "name": "Accessibility Vision",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Experience websites through a different lens. Learn more about the importance of accessible design.",
+  "homepage_url": "https://helloworldfromouter.space/",
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "Accessibility Vision"
+  },
+  "permissions": [
+    "https://*/*",
+    "http://*/*",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*/*",
+    "http://*/*"],
+	"js": ["inject.js"],
+      "css": ["file.css"],
+	"run_at": "document_end"
+    }
+   ],
+"icons": { "16": "16.png",
+           "48": "48.png",
+          "128": "128.png" }
+}

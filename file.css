@@ -1,0 +1,19 @@
+body{
+    position:absolute;
+    width:100vw; height:100vh;
+    margin:0 auto;
+}
+
+#adi{
+    content:'';
+    position:fixed;
+    left:var(--mouse-x); top:var(--mouse-y);
+    border-radius:100%;
+    width:150px; height:150px;
+    box-shadow: 0px 0px 0vw 200vw #000000, inset 0px 0px 25px 0vw #000000;
+    pointer-events: none;
+}
+
+* {
+    z-index: 0 !important;
+}
